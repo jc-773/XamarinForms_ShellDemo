@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:pages="clr-namespace:XamarinShell;assembly=XamarinShell"
+       x:Class="XamarinShell.FlyoutMainShell">
+
+    <!-- <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="Black" HeightRequest="200">
+                <Image Aspect="AspectFill"
+                       Source="asap.jpg"
+                       Opacity="0.6"/>
+                <Label Text="Online Booking" TextColor="Purple" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Grid>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate> -->
+    <Shell.FlyoutHeader>
+        <pages:FlyoutHeaderView />
+    </Shell.FlyoutHeader>
+    <FlyoutItem Title="Car Booking">
+        <ShellContent ContentTemplate="{DataTemplate pages:CarBooking}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Flight Booking">
+        <ShellContent ContentTemplate="{DataTemplate pages:FlightBooking}"/>
+    </FlyoutItem>
+</Shell>
